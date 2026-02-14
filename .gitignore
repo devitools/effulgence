@@ -1,0 +1,8 @@
+/vendor/
+/node_modules/
+/tests/.phpunit/
+/serendipity/
+.phpunit.result.cache
+.php-cs-fixer.cache
+.env
+*.cache

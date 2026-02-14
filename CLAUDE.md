@@ -193,11 +193,12 @@ composer fix              # Auto-fix code style
 
 When working in this repository:
 
-1. **Understand the Serendipity reference** — Before implementing a feature, check how Serendipity solves it for Hyperf at [github.com/devitools/serendipity](https://github.com/devitools/serendipity). Adapt the concept to Laravel idioms, don't just copy-paste.
-2. **Keep the Domain layer clean** — Never import Laravel classes in `src/Domain/`. Use contracts/interfaces instead.
-3. **Read before writing** — Always read existing files before modifying them.
-4. **Stay focused** — Only make changes that are directly requested.
-5. **Keep this file updated** — When you make significant structural changes, update this CLAUDE.md.
-6. **Follow existing patterns** — Match the style and conventions already present in the codebase.
-7. **Test your changes** — Run the test suite before considering work complete.
-8. **Don't over-engineer** — Prefer simple, direct solutions.
+1. **All code, comments, and text must be written in English.**
+2. **Understand the Serendipity reference** — Before implementing a feature, check how Serendipity solves it for Hyperf at [github.com/devitools/serendipity](https://github.com/devitools/serendipity). Adapt the concept to Laravel idioms, don't just copy-paste.
+3. **Keep the Domain layer clean** — Never import Laravel classes in `src/Domain/`. Use contracts/interfaces instead.
+4. **Read before writing** — Always read existing files before modifying them.
+5. **Stay focused** — Only make changes that are directly requested.
+6. **Keep this file updated** — When you make significant structural changes, update this CLAUDE.md.
+7. **Follow existing patterns** — Match the style and conventions already present in the codebase.
+8. **Test your changes** — Run the test suite before considering work complete.
+9. **Don't over-engineer** — Prefer simple, direct solutions.

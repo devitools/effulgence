@@ -1,0 +1,11 @@
+parameters:
+  level: 10
+  paths:
+    - config
+    - src
+  reportUnmatchedIgnoredErrors: false
+  treatPhpDocTypesAsCertain: false
+  ignoreErrors:
+    - identifier: missingType.generics
+    - identifier: missingType.iterableValue
+    - '#Method [a-zA-Z0-9\\_\\:\(\)]+ should return static\([a-zA-Z0-9\\_\\:\(\)]+<T>\) but returns static\([a-zA-Z0-9\\_\\:\(\)]+<mixed>\)#'

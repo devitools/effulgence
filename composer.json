@@ -1,0 +1,98 @@
+{
+  "name": "devitools/effulgence",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "laravel",
+    "ddd"
+  ],
+  "description": "The Laravel missing component",
+  "autoload": {
+    "psr-4": {
+      "Effulgence\\": "src/"
+    },
+    "files": [
+      "src/_/runtime.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Effulgence\\Test\\": "tests/",
+      "Effulgence\\Test\\_\\": "tests/_/"
+    }
+  },
+  "require": {
+    "php": "^8.3",
+    "ext-json": "*",
+    "ext-mongodb": "*",
+    "ext-pdo": "*",
+    "devitools/constructo": "^1.5.12",
+    "fakerphp/faker": "^1.24",
+    "google/cloud-logging": "^1.32",
+    "guzzlehttp/guzzle": "^7.9",
+    "guzzlehttp/psr7": "^2.7",
+    "laravel/framework": "^11.0|^12.0",
+    "mongodb/mongodb": "^1.19",
+    "monolog/monolog": "^3.8",
+    "mustache/mustache": "^2.14",
+    "psr/container": "^2.0",
+    "psr/event-dispatcher": "^1.0",
+    "psr/http-client": "^1.0",
+    "psr/http-message": "^2.0",
+    "psr/log": "^3.0",
+    "rakibtg/sleekdb": "^2.15",
+    "sentry/sentry-laravel": "^4.0",
+    "symfony/console": "^7.2",
+    "visus/cuid2": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "orchestra/testbench": "^9.0|^10.0",
+    "phpmd/phpmd": "^2.15",
+    "phpstan/phpstan": "^2",
+    "phpunit/phpunit": "^10.5|^11.0",
+    "rector/rector": "^2",
+    "roave/security-advisories": "dev-latest",
+    "squizlabs/php_codesniffer": "^3.11",
+    "vimeo/psalm": "^5.26"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit",
+    "lint:phpcs": "phpcs --standard=PSR12,phpcs.xml -s src",
+    "lint:phpstan": "phpstan analyse --memory-limit 512M",
+    "lint:phpmd": "phpmd src ansi phpmd.xml",
+    "lint:rector": "rector process --dry-run",
+    "lint:psalm": "psalm",
+    "lint": [
+      "composer lint:phpcs",
+      "composer lint:phpstan",
+      "composer lint:phpmd",
+      "composer lint:rector",
+      "composer lint:psalm"
+    ],
+    "ci": [
+      "composer lint",
+      "composer test"
+    ],
+    "fix": [
+      "rector process",
+      "php-cs-fixer fix src",
+      "php-cs-fixer fix config",
+      "php-cs-fixer fix tests"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Effulgence\\EffulgenceServiceProvider"
+      ]
+    }
+  }
+}
