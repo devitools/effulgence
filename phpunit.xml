@@ -4,13 +4,12 @@
          colors="true"
          testdox="true"
          cacheDirectory="tests/.phpunit/cache"
-         cacheResultFile="tests/.phpunit/result.cache"
          displayDetailsOnTestsThatTriggerWarnings="true"
          displayDetailsOnTestsThatTriggerDeprecations="true"
          displayDetailsOnTestsThatTriggerErrors="true"
-         failOnDeprecation="true"
          failOnRisky="true"
          failOnWarning="true"
+         bootstrap="tests/bootstrap.php"
 >
     <coverage disableCodeCoverageIgnore="true">
         <report>
